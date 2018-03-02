@@ -1,3 +1,5 @@
 Parallel Sorting in c using N standalone processes that communicte with pipes
 Enable the debug mode (debug=1) to be able to follow step by step what happens
 
+example of execution 
+
