@@ -1,13 +1,9 @@
-/**
- * @Date : 2017/2018
- * @author @merouane 
- * parallelSorting with procesesses and pipes 
- */
-//  main.c
-//  testfork
 //
-//  Created by @merouane on 12/31/17.
-//  Copyright © 2017 Merouone. All rights reserved.
+//  main.c
+//  ptest
+//
+//  Created by mepro on 18/01/2019.
+//  Copyright © 2019 mepro. All rights reserved.
 //
 
 #include "parallelSorting.h"
@@ -30,7 +26,7 @@ int t_array_size = sizeof(t_array)/sizeof(int);
  *  main function call
  */
 int main(int argc, const char * argv[]) {
-    // global array 
+    // global array
     int st_array[ s_array_size + t_array_size ];
     ExecutionTime xTime;
     // begin counting time for execution
@@ -48,11 +44,11 @@ int main(int argc, const char * argv[]) {
     
     printf("T in --------------\n");
     printArray(getpid(), t_array, t_array_size);
-//
+    //
     parallelSorting( s_array, t_array , s_array_size , t_array_size,myPipeForS,myPipeForT);
-//    
+    //
     //partitionST( s_array, t_array , s_array_size , t_array_size,myPipeForS,myPipeForT);
-
+    
     //
     int readS_ok = 0 ,readT_ok = 0;
     ssize_t reads , readt;
